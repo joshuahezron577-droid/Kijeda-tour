@@ -12,39 +12,33 @@ export default function RootLayout({ children }) {
   {/* Header/nav */} 
         {children}
 {/* Footer */}
-<footer className="bg-gray-900 text-gray-300 py-12 px-6">
-  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-    
-    {/* 1. Branding & Copyright */}
+<footer className="bg-gray-900 text-gray-300 py-6 px-6">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     <div>
-      <h2 className="text-white text-xl font-bold mb-4">Kijeda Tours</h2>
+      <h2 className="text-white text-xl font-bold mb-3">Kijeda Tours</h2>
       <p className="text-sm">Tunaongoza safari za ndoto zako Zanzibar na Tanzania nzima.</p>
-      <p className="text-xs text-gray-500 mt-6">&copy; {new Date().getFullYear()} Kijeda Tours. All rights reserved.</p>
+      <p className="text-xs text-gray-500 mt-4">&copy; {new Date().getFullYear()} Kijeda Tours. All rights reserved.</p>
       <p className="text-xs text-gray-500">Created by GS Codestar</p>
     </div>
-
-    {/* 2. Menu Links (Kama ulivyotaka) */}
     <div>
-      <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-      <ul className="space-y-2">
-        <li><a href="/" className="hover:text-orange-500">Home</a></li>
-        <li><a href="/tours" className="hover:text-orange-500">Our Tours</a></li>
-        <li><a href="/destinations" className="hover:text-orange-500">Destinations</a></li>
-        <li><a href="/faq" className="hover:text-orange-500">FAQ</a></li>
-        <li><a href="/reviews" className="hover:text-orange-500">Reviews</a></li>
+      <h3 className="text-white font-semibold mb-3">Quick Links</h3>
+      <ul className="space-y-1.5">
+        <li><a href="/" className="hover:text-orange-500 text-sm">Home</a></li>
+        <li><a href="/#dar-tour" className="hover:text-orange-500 text-sm">Dar es Salaam Tours</a></li>
+        <li><a href="/#zanzibar-tour" className="hover:text-orange-500 text-sm">Zanzibar Tours</a></li>
+        <li><a href="/#destinations" className="hover:text-orange-500 text-sm">Destinations</a></li>
+        <li><a href="/#faq" className="hover:text-orange-500 text-sm">FAQ</a></li>
+        <li><a href="/#reviews" className="hover:text-orange-500 text-sm">Reviews</a></li>
       </ul>
     </div>
-
-    {/* 3. Contact Info (Kama ulivyopiga picha) */}
     <div>
-      <h3 className="text-white font-semibold mb-4">Contact Us</h3>
-      <div className="space-y-3 text-sm">
-        <p>📍 Stone Town, Zanzibar, Tanzania</p>
+      <h3 className="text-white font-semibold mb-3">Contact Us</h3>
+      <div className="space-y-2 text-sm">
+        <p>📍 Dar es Salaam, Tanzania</p>
         <p>📧 info@kijedatours.com</p>
-        <p>📞 +255 759 834 274</p>
+        <p>📞 +255 773 753 292</p>
       </div>
     </div>
-
   </div>
 </footer>
 {/* Third party scripts */}
