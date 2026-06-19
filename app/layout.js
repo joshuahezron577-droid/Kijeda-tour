@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function RootLayout({ children }) {
   return (
-    <html className={inter.className}>
+    <html className={inter.className} data-theme="light">
       <body>
   {/* Header/nav */} 
         {children}
