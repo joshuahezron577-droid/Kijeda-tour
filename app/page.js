@@ -64,7 +64,7 @@ export default function Page() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
             </label>
-            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+<ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[9999] p-2 shadow bg-base-100 rounded-box w-72 max-w-[85vw] overflow-hidden border border-base-200">
               <li><a href="/" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Home</a></li>
               <li>
                 <a href="#" className="hover:text-amber-700 transition-colors duration-300 ease-in-out">Our Tours</a>
