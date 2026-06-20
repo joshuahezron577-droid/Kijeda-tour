@@ -3,3 +3,31 @@
 @plugin "flowbite/plugin";
 
 @source "../node_modules/flowbite-react/dist";
+
+html {
+  /* top bar (36px) + navbar (~64px) + breathing room (8px) */
+  scroll-padding-top: 108px;
+  scroll-behavior: smooth;
+}
+
+@keyframes ring {
+  0%   { transform: rotate(0deg); }
+  10%  { transform: rotate(16deg); }
+  20%  { transform: rotate(-12deg); }
+  30%  { transform: rotate(14deg); }
+  40%  { transform: rotate(-10deg); }
+  50%  { transform: rotate(8deg); }
+  60%  { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.phone-ring {
+  animation: ring 2.5s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: top center;
+}
+
+/* Section heading glow shadow */
+.section-heading {
+  text-shadow: 0 0 8px rgba(180, 83, 9, 0.3), 0 0 20px rgba(180, 83, 9, 0.15);
+}

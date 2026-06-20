@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   {/* Header/nav */} 
         {children}
 {/* Footer */}
-<footer className="bg-gray-900 text-gray-300 py-6 px-6">
+<footer className="bg-gray-900 text-gray-300 py-4 px-6">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     <div>
       <h2 className="text-white text-xl font-bold mb-3">Kijeda Tours</h2>
@@ -23,12 +23,12 @@ export default function RootLayout({ children }) {
     <div>
       <h3 className="text-white font-semibold mb-3">Quick Links</h3>
       <ul className="space-y-1.5">
-        <li><a href="/" className="hover:text-orange-500 text-sm">Home</a></li>
-        <li><a href="/#dar-tour" className="hover:text-orange-500 text-sm">Dar es Salaam Tours</a></li>
-        <li><a href="/#zanzibar-tour" className="hover:text-orange-500 text-sm">Zanzibar Tours</a></li>
-        <li><a href="/#destinations" className="hover:text-orange-500 text-sm">Destinations</a></li>
-        <li><a href="/#faq" className="hover:text-orange-500 text-sm">FAQ</a></li>
-        <li><a href="/#reviews" className="hover:text-orange-500 text-sm">Reviews</a></li>
+        <li><a href="/" className="hover:text-orange-500 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-orange-500 underline-offset-4 text-sm">Home</a></li>
+        <li><a href="/#dar-tour" className="hover:text-orange-500 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-orange-500 underline-offset-4 text-sm">Dar es Salaam Tours</a></li>
+        <li><a href="/#zanzibar-tour" className="hover:text-orange-500 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-orange-500 underline-offset-4 text-sm">Zanzibar Tours</a></li>
+        <li><a href="/#destinations" className="hover:text-orange-500 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-orange-500 underline-offset-4 text-sm">Destinations</a></li>
+        <li><a href="/#faq" className="hover:text-orange-500 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-orange-500 underline-offset-4 text-sm">FAQ</a></li>
+        <li><a href="/#reviews" className="hover:text-orange-500 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-orange-500 underline-offset-4 text-sm">Reviews</a></li>
       </ul>
     </div>
     <div>

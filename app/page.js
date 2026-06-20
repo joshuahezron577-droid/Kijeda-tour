@@ -41,27 +41,18 @@ export default function Page() {
         {/* Left — contact links */}
         <div className="flex items-center gap-8">
           <a href="tel:+255773753292" className="flex items-center gap-2 hover:text-emerald-300 transition-colors duration-200 tracking-wide">
-            <FaPhone className="text-xs" />
+            <span className="phone-ring"><FaPhone className="text-sm rotate-[135deg]" /></span>
             +255 773 753 292
           </a>
           <span className="text-white/20">|</span>
           <a href="https://wa.me/255773753292?text=Habari%20Kijeda%20Tour!" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-emerald-300 transition-colors duration-200 tracking-wide">
             <FaWhatsapp className="text-sm" />
-            WhatsApp Us
+            WhatsApp
           </a>
         </div>
 
-        {/* Right — theme toggle */}
-        <button
-          onClick={toggleTheme}
-          className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-all duration-200 px-4 py-1 rounded-full text-white text-xs font-medium tracking-wide"
-        >
-          {darkMode ? (
-            <><svg className="h-3.5 w-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>Light Mode</>
-          ) : (
-            <><svg className="h-3.5 w-3.5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>Dark Mode</>
-          )}
-        </button>
+        {/* Right — empty now, theme moved to navbar */}
+        <div></div>
       </div>
 
       {/* ── Navbar ── */}
@@ -74,49 +65,104 @@ export default function Page() {
               </svg>
             </label>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li><a href="/">Home</a></li>
+              <li><a href="/" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Home</a></li>
               <li>
-                <a href="#">Our Tours</a>
+                <a href="#" className="hover:text-amber-700 transition-colors duration-300 ease-in-out">Our Tours</a>
                 <ul className="p-2">
-                  <li><a href="/#dar-tour">Dar-es-salaam tour</a></li>
-                  <li><a href="/#zanzibar-tour">Zanzibar tour</a></li>
+                  <li><a href="/#dar-tour" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Dar-es-salaam tour</a></li>
+                  <li><a href="/#zanzibar-tour" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Zanzibar tour</a></li>
                 </ul>
               </li>
-              <li><a href="/#destinations">Destinations</a></li>
-              <li><a href="/#faq">FAQ</a></li>
-              <li><a href="/#reviews">Reviews</a></li>
+              <li><a href="/#why-kijeda" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Why Us</a></li>
+              <li><a href="/#destinations" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Destinations</a></li>
+              <li><a href="/#faq" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">FAQ</a></li>
+              <li><a href="/#reviews" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Reviews</a></li>
             </ul>
           </div>
-          <a className="text-2xl font-bold text-amber-700 cursor-pointer" href="/">Kijeda-Tour</a>
+          <a href="/" className="flex items-center gap-2 cursor-pointer">
+            {/* Logo SVG */}
+            <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Sun */}
+              <circle cx="40" cy="28" r="16" fill="#F5A623" />
+              <circle cx="40" cy="28" r="10" fill="#FBBF24" />
+              {/* Sun rays */}
+              {[0,45,90,135,180,225,270,315].map((deg, i) => (
+                <line key={i}
+                  x1={40 + 13 * Math.cos(deg * Math.PI / 180)}
+                  y1={28 + 13 * Math.sin(deg * Math.PI / 180)}
+                  x2={40 + 18 * Math.cos(deg * Math.PI / 180)}
+                  y2={28 + 18 * Math.sin(deg * Math.PI / 180)}
+                  stroke="#F5A623" strokeWidth="2.5" strokeLinecap="round"
+                />
+              ))}
+              {/* Map */}
+              <path d="M18 42 L30 38 L50 44 L62 40 L62 68 L50 72 L30 66 L18 70 Z" fill="#E8D5A3" stroke="#C9A96E" strokeWidth="1.5" strokeLinejoin="round"/>
+              <line x1="30" y1="38" x2="30" y2="66" stroke="#C9A96E" strokeWidth="1.2"/>
+              <line x1="50" y1="44" x2="50" y2="72" stroke="#C9A96E" strokeWidth="1.2"/>
+              {/* Pin */}
+              <circle cx="40" cy="50" r="7" fill="#1A3C34" />
+              <circle cx="40" cy="50" r="3.5" fill="white" />
+              <path d="M40 57 L36 65 Q40 63 44 65 Z" fill="#1A3C34"/>
+            </svg>
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-extrabold text-amber-800 tracking-tight">Kijeda</span>
+              <span className="text-xs font-medium text-amber-600 tracking-widest uppercase">Tours & Safaris</span>
+            </div>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-semibold">
-            <li><a href="/">Home</a></li>
+            <li><a href="/" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Home</a></li>
             <li>
               <details>
-                <summary>Our Tours</summary>
+                <summary className="hover:text-amber-700 transition-colors duration-300 ease-in-out">Our Tours</summary>
                 <ul className="p-2 w-48 z-10 bg-base-100 shadow-lg">
-                  <li><a href="/#dar-tour">Dar-es-salaam tour</a></li>
-                  <li><a href="/#zanzibar-tour">Zanzibar tour</a></li>
+                  <li><a href="/#dar-tour" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Dar-es-salaam tour</a></li>
+                  <li><a href="/#zanzibar-tour" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Zanzibar tour</a></li>
                 </ul>
               </details>
             </li>
-            <li><a href="/#destinations">Destinations</a></li>
-            <li><a href="/#faq">FAQ</a></li>
-            <li><a href="/#reviews">Reviews</a></li>
+            <li><a href="/#why-kijeda" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Why Us</a></li>
+            <li><a href="/#destinations" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Destinations</a></li>
+            <li><a href="/#faq" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">FAQ</a></li>
+            <li><a href="/#reviews" className="hover:text-amber-700 transition-colors duration-300 ease-in-out underline decoration-transparent hover:decoration-amber-700 underline-offset-4">Reviews</a></li>
           </ul>
         </div>
         <div className="navbar-end gap-3">
-          <div className="flex items-center">
-            <div className={`flex items-center overflow-hidden transition-all duration-300 rounded-full border ${searchOpen ? 'w-56 border-amber-600 bg-white shadow-md' : 'w-10 border-transparent bg-transparent'}`}>
-              {searchOpen && (
-                <input type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Search tour..." autoFocus onKeyDown={(e) => e.key === 'Escape' && setSearchOpen(false)} className="flex-1 pl-4 pr-2 py-2 text-sm bg-transparent outline-none text-gray-700" />
-              )}
-              <button onClick={() => setSearchOpen(!searchOpen)} className="w-10 h-10 flex items-center justify-center rounded-full bg-amber-700 hover:bg-amber-800 text-white transition-colors duration-200 shrink-0">
-                <FaSearch className="text-sm" />
+          {/* Search Bar */}
+          <div className="relative group">
+            <div className="flex items-center bg-gray-100 rounded-full border border-transparent overflow-hidden focus-within:ring-2 focus-within:ring-orange-500 transition-all duration-300">
+              <div className="pl-4 text-gray-400 group-focus-within:text-orange-500 transition-colors">
+                <FaSearch size={14} />
+              </div>
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search tour..."
+                className="bg-transparent py-2 px-3 outline-none border-none ring-0 text-sm w-32 md:w-40 placeholder:text-gray-400"
+              />
+              <button className="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 text-sm font-semibold transition-all duration-300 active:scale-95">
+                Search
               </button>
             </div>
           </div>
+          {/* Theme Toggle — icon only, far right */}
+          <button
+            onClick={toggleTheme}
+            className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 mr-3"
+            title={darkMode ? 'Switch to Light' : 'Switch to Dark'}
+          >
+            {darkMode ? (
+              <svg className="h-6 w-6 fill-current text-amber-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"/>
+              </svg>
+            ) : (
+              <svg className="h-6 w-6 fill-current text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"/>
+              </svg>
+            )}
+          </button>
         </div>
       </div>
 
@@ -137,9 +183,9 @@ export default function Page() {
       </div>
 
       {/* ── Why Choose Kijeda Tour ── */}
-      <section className="bg-[#f5f5f0] py-16 px-6 md:px-16">
+      <section id="why-kijeda" className="bg-[#f5f5f0] py-16 px-6 md:px-16">
         <div className="max-w-5xl mx-auto text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 mb-3">Why Choose Kijeda Tour</h1>
+          <h1 className="text-4xl font-bold text-gray-800 mb-3 section-heading">Why Choose Kijeda Tour</h1>
           <p className="text-gray-400 text-base">Authentic experiences, expert local guides, and sustainable adventures across Tanzania.</p>
         </div>
         <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -164,13 +210,13 @@ export default function Page() {
       {/* ── Dar es Salaam Tours ── */}
       <section id="dar-tour" className="bg-[#f5f5f0] py-16 px-6 md:px-16">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-3">Dar es Salaam Tours</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-3 section-heading">Dar es Salaam Tours</h2>
           <p className="text-gray-400 text-base">Discover the best of Dar es Salaam — pristine beaches, tropical islands, and unforgettable city experiences.</p>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=600&q=80" alt="Kilimanjaro" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=600&q=80" alt="Kilimanjaro" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ Siku 7</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -180,8 +226,8 @@ export default function Page() {
             </div>
           </div>
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Kigamboni Beach" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Kigamboni Beach" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ Siku 1</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -191,8 +237,8 @@ export default function Page() {
             </div>
           </div>
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80" alt="Bongoyo Island" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1559494007-9f5847c49d94?w=600&q=80" alt="Bongoyo Island" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ Siku 1</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -202,8 +248,8 @@ export default function Page() {
             </div>
           </div>
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Mlimani City" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&q=80" alt="Mlimani City" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ Nusu siku</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -218,13 +264,13 @@ export default function Page() {
       {/* ── Zanzibar Tours ── */}
       <section id="zanzibar-tour" className="bg-[#f5f5f0] py-16 px-6 md:px-16">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-3">Zanzibar Tours</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-3 section-heading">Zanzibar Tours</h2>
           <p className="text-gray-400 text-base">Explore the Spice Island — from powder-white beaches and turquoise lagoons to the ancient streets of Stone Town.</p>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=600&q=80" alt="Nungwi Beach" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?w=600&q=80" alt="Nungwi Beach" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ 3 days</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -234,8 +280,8 @@ export default function Page() {
             </div>
           </div>
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600&q=80" alt="Stone Town" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600&q=80" alt="Stone Town" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ 2 days</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -245,8 +291,8 @@ export default function Page() {
             </div>
           </div>
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600&q=80" alt="Kendwa Beach" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1586861635167-e5223aadc9fe?w=600&q=80" alt="Kendwa Beach" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ 3 days</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -256,8 +302,8 @@ export default function Page() {
             </div>
           </div>
           <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col">
-            <div className="relative w-full h-52">
-              <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" alt="Paje Lagoon" className="w-full h-full object-cover" />
+            <div className="relative w-full h-52 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" alt="Paje Lagoon" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
               <span className="absolute top-3 left-3 bg-[#1A3C34] text-white text-xs font-semibold px-3 py-1 rounded-full">⏱ 2 days</span>
             </div>
             <div className="p-5 flex flex-col gap-3 flex-1">
@@ -272,12 +318,12 @@ export default function Page() {
       {/* ── Destinations ── */}
       <section id="destinations" className="bg-[#f5f5f0] py-16 px-6 md:px-16">
         <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-3">Destinations</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-3 section-heading">Destinations</h2>
           <p className="text-gray-400 text-base">Explore Tanzania&apos;s greatest wildlife parks, natural wonders, and cultural landmarks.</p>
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80" alt="Serengeti" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&q=80" alt="Serengeti" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             <span className="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Wildlife</span>
             <div className="absolute bottom-5 left-5">
@@ -286,7 +332,7 @@ export default function Page() {
             </div>
           </div>
           <div className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80" alt="Ngorongoro" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&q=80" alt="Ngorongoro" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             <span className="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Natural Wonder</span>
             <div className="absolute bottom-5 left-5">
@@ -295,7 +341,7 @@ export default function Page() {
             </div>
           </div>
           <div className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1551009175-8a68da93d5f9?w=800&q=80" alt="Tarangire" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1551009175-8a68da93d5f9?w=800&q=80" alt="Tarangire" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             <span className="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Elephants</span>
             <div className="absolute bottom-5 left-5">
@@ -304,7 +350,7 @@ export default function Page() {
             </div>
           </div>
           <div className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?w=800&q=80" alt="Maasai" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1612686635542-2244ed9f8ddc?w=800&q=80" alt="Maasai" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             <span className="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Culture</span>
             <div className="absolute bottom-5 left-5">
@@ -313,7 +359,7 @@ export default function Page() {
             </div>
           </div>
           <div className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80" alt="Elephant Kingdom" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1564760055775-d63b17a55c44?w=800&q=80" alt="Elephant Kingdom" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             <span className="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Safari</span>
             <div className="absolute bottom-5 left-5">
@@ -322,7 +368,7 @@ export default function Page() {
             </div>
           </div>
           <div className="group relative rounded-2xl overflow-hidden h-72 cursor-pointer">
-            <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=800&q=80" alt="Mount Kilimanjaro" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <img src="https://images.unsplash.com/photo-1589553416260-f586c8f1514f?w=800&q=80" alt="Mount Kilimanjaro" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:brightness-90" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
             <span className="absolute top-4 left-4 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">Trekking</span>
             <div className="absolute bottom-5 left-5">
@@ -336,7 +382,7 @@ export default function Page() {
       {/* ── FAQ ── */}
       <section id="faq" className="bg-[#f5f5f0] py-16 px-6 md:px-16">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-3">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-3 section-heading">Frequently Asked Questions</h2>
           <p className="text-gray-400 text-base">Everything you need to know before booking your Tanzania adventure.</p>
         </div>
         <div className="max-w-3xl mx-auto flex flex-col gap-3">
@@ -376,7 +422,7 @@ export default function Page() {
       {/* ── Reviews ── */}
       <section id="reviews" className="bg-[#f5f5f0] py-16 px-6 md:px-16">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-3">What Our Travelers Say</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-3 section-heading">What Our Travelers Say</h2>
           <p className="text-gray-400 text-base">Real stories from real adventurers who explored Tanzania with us.</p>
         </div>
         <div className="max-w-2xl mx-auto relative">
@@ -400,6 +446,7 @@ export default function Page() {
               <button key={i} onClick={() => setCurrent(i)} className={`h-2.5 rounded-full transition-all duration-300 ${i === current ? 'bg-amber-700 w-6' : 'bg-gray-300 w-2.5'}`} />
             ))}
           </div>
+          
         </div>
       </section>
 
