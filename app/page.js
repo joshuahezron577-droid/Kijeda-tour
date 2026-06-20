@@ -37,7 +37,7 @@ export default function Page() {
     <div className="w-full">
 
       {/* ── Top Bar ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-[#1A3C34] text-white hidden lg:flex justify-between items-center text-xs h-9 px-16">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-[#1A3C34] text-white hidden sm:flex justify-between items-center text-xs h-9 px-4 sm:px-6 md:px-16">
         {/* Left — contact links */}
         <div className="flex items-center gap-8">
           <a href="tel:+255773753292" className="flex items-center gap-2 hover:text-emerald-300 transition-colors duration-200 tracking-wide">
