@@ -80,33 +80,9 @@ export default function Page() {
             </ul>
           </div>
           <a href="/" className="flex items-center gap-2 cursor-pointer">
-            {/* Logo SVG */}
-            <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Sun */}
-              <circle cx="40" cy="28" r="16" fill="#F5A623" />
-              <circle cx="40" cy="28" r="10" fill="#FBBF24" />
-              {/* Sun rays */}
-              {[0,45,90,135,180,225,270,315].map((deg, i) => (
-                <line key={i}
-                  x1={40 + 13 * Math.cos(deg * Math.PI / 180)}
-                  y1={28 + 13 * Math.sin(deg * Math.PI / 180)}
-                  x2={40 + 18 * Math.cos(deg * Math.PI / 180)}
-                  y2={28 + 18 * Math.sin(deg * Math.PI / 180)}
-                  stroke="#F5A623" strokeWidth="2.5" strokeLinecap="round"
-                />
-              ))}
-              {/* Map */}
-              <path d="M18 42 L30 38 L50 44 L62 40 L62 68 L50 72 L30 66 L18 70 Z" fill="#E8D5A3" stroke="#C9A96E" strokeWidth="1.5" strokeLinejoin="round"/>
-              <line x1="30" y1="38" x2="30" y2="66" stroke="#C9A96E" strokeWidth="1.2"/>
-              <line x1="50" y1="44" x2="50" y2="72" stroke="#C9A96E" strokeWidth="1.2"/>
-              {/* Pin */}
-              <circle cx="40" cy="50" r="7" fill="#1A3C34" />
-              <circle cx="40" cy="50" r="3.5" fill="white" />
-              <path d="M40 57 L36 65 Q40 63 44 65 Z" fill="#1A3C34"/>
-            </svg>
             <div className="flex flex-col leading-tight">
-              <span className="text-xl font-extrabold text-amber-800 tracking-tight">Kijeda</span>
-              <span className="text-xs font-medium text-amber-600 tracking-widest uppercase">Tours & Safaris</span>
+              <span className="text-xl font-extrabold text-amber-800 tracking-tight">Kijeda Tour</span>
+              <span className="text-xs font-medium text-amber-600 tracking-widest uppercase">Safaris</span>
             </div>
           </a>
         </div>
