@@ -4,11 +4,42 @@ import { FaPhone, FaWhatsapp, FaSearch } from 'react-icons/fa';
 
 export default function Page() {
 
+  const THEME_KEY = 'kijeda_theme';
+
   const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize theme on first client render (persisted + correct initial state)
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const savedTheme = window.localStorage?.getItem(THEME_KEY);
+    const htmlTheme = document.documentElement.getAttribute('data-theme');
+
+    // Prefer saved theme; otherwise keep existing <html data-theme>
+    const theme = savedTheme || htmlTheme || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+    document.body?.setAttribute('data-theme', theme);
+
+    // Avoid setState if not necessary
+    setDarkMode((prev) => (prev === (theme === 'forest') ? prev : theme === 'forest'));
+  }, []);
+
+
   const toggleTheme = () => {
-    const newMode = !darkMode;
-    setDarkMode(newMode);
-    document.documentElement.setAttribute('data-theme', newMode ? 'forest' : 'light');
+    if (typeof document === 'undefined') return;
+
+    // Derive current theme from DOM to avoid stale React state issues
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    const nextTheme = current === 'forest' ? 'light' : 'forest';
+
+    document.documentElement.setAttribute('data-theme', nextTheme);
+    document.body?.setAttribute('data-theme', nextTheme);
+
+    setDarkMode(nextTheme === 'forest');
+
+    if (typeof window !== 'undefined') {
+      window.localStorage?.setItem(THEME_KEY, nextTheme);
+    }
   };
 
   const reviews = [
@@ -81,8 +112,8 @@ export default function Page() {
           </div>
           <a href="/" className="flex items-center gap-2 cursor-pointer">
             <div className="flex flex-col leading-tight">
-              <span className="text-xl font-extrabold text-amber-800 tracking-tight">Kijeda Tour</span>
-              <span className="text-xs font-medium text-amber-600 tracking-widest uppercase">Safaris</span>
+              <span className="text-base sm:text-xl font-extrabold text-amber-800 tracking-tight">Kijeda Tour &</span>
+              <span className="text-[10px] sm:text-xs font-medium text-amber-600 tracking-widest uppercase">Safaris</span>
             </div>
           </a>
         </div>
